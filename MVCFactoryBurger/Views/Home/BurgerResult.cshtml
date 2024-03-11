@@ -1,0 +1,20 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewBag.Title = "Search Results";
+}
+
+<h2>Search Result</h2>
+
+@if(ViewBag.RequestedBurger != null)
+{
+    <h3>Burger Ingredients</h3>
+    <p><strong>Bun:</strong> @ViewBag.RequestedBurger.getBun()</p>
+    <p><strong>Patty:</strong> @ViewBag.RequestedBurger.getPatty()</p>
+    <p><strong>Condiments:</strong> @ViewBag.RequestedBurger.getCondiments()</p>
+}
+else
+{
+    <p>No can do bra!</p>
+}
